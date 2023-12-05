@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.0.0)
+
+project(cppthings VERSION 0.0.1)
+
+#signle file to be executable 
+file(GLOB_RECURSE source ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+
+foreach(SRC ${source})
+get_filename_component(EXE ${SRC} NAME_WE)
+add_executable(${EXE} ${SRC})
+endforeach()
+
+
+
